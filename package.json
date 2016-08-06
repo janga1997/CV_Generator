@@ -1,0 +1,14 @@
+{
+  "name": "cv_gen",
+  "version": "1.0.0",
+  "description": "A CV generator which generates a PDF resume based on entry in a HTML form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Janga",
+  "license": "ISC",
+  "dependencies": {
+    "pdfkit": "^0.7.2"
+  }
+}

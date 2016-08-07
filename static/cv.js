@@ -11,6 +11,8 @@ var data={
 	,interests:""
 };
 
+var socket=io();
+
  $("#submit_button").click(function () {
  	// body...
  	//Basic Information
@@ -22,15 +24,15 @@ var data={
  	//Work Experience
  	data.work_ex.job_title=$("#job_title").val();
  	data.work_ex.company_name=$("#company_name").val();
- 	data.work_ex.start_date=$("#start_date").val();
- 	data.work_ex.end_date=$("#end_date").val();
+ 	data.work_ex.start_date=$("#start_date_work").val();
+ 	data.work_ex.end_date=$("#end_date_work").val();
  	data.work_ex.details=$("#details").val();
 
  	//Education
  	data.education.course_name=$("#course_name").val();
  	data.education.institution_name=$("#institution_name").val();
- 	data.education.start_date=$("#start_date").val();
- 	data.education.end_date=$("#end_date").val();
+ 	data.education.start_date=$("#start_date_edu").val();
+ 	data.education.end_date=$("#end_date_edu").val();
 
  	//Positions of Responsibility
  	data.positions.por1=$("#por1").val();
@@ -39,6 +41,6 @@ var data={
  	//Interests
  	data.interests=$("#interests").val();
 
+ 	socket.emit("data",data);
 
-console.log(data);
  });

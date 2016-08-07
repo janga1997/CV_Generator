@@ -35,4 +35,12 @@ app.get('/',
   	res.sendFile(path.join(__dirname + '/index.html'));
   });
 
+io.on('connection', function (socket) {
+	// body...
+	socket.on('data', function (msg) {
+		// body...
+		console.log(msg);
+	})
+})
+
 http.listen(3000);
